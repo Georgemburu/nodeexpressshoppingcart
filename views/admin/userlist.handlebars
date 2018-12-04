@@ -1,0 +1,38 @@
+<div>
+    {{userInfo}}
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>NO:</th>
+                <th>FIRSTNAME</th>
+                <th>LASTNAME</th>
+                <th>USERNAME</th>
+                <th>EMAIL</th>
+                <th>PASSWORD</th>
+                <th>_ID</th>
+                <th>ACTION</th>
+            </tr>
+            </thead>
+            <tbody>
+                {{#each userList}}
+                
+                <tr>
+                    <td>#</td>
+                    <td>{{this.firstName}}</td>
+                    <td>{{this.lastName}}</td>
+                    <td>{{this.username}}</td>
+                    <td>{{this.email}}</td>
+                    <td>{{this.password}}</td>
+                    <td>{{this._id}}</td>
+                   <td><button style="text-align: center;"><a style=" padding: 40px; margin: 0;" href="/admin/userlist/{{this._id}}">&times;</a></button></td>
+                       
+                    
+                   
+                </tr>
+                {{/each}}
+                
+            </tbody>
+        </table>
+    </div>
+</div>

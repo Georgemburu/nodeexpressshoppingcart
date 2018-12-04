@@ -1,0 +1,19 @@
+ 
+    <div>
+        <h1>Here is your Order</h1>
+        <p>Total Price: 0{{totalPrice}}</p>
+        <div>
+            <ul>
+            {{#each products}}
+                <li> Item: {{this.item.title}}  price: ${{this.item.price}} Quantity: {{this.qty}} <span><a href="/cart/removeone/{{this.item._id}}">remove one</a></span>  <span><a href="/cart/removeall/{{this.item._id}}">remove all</a></span></li>
+            {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    {{#if session}}
+        <div>
+            <a href="/cart/checkout">CHECKOUT</a>
+        </div>
+    {{/if}}
+

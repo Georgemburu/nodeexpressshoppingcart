@@ -1,0 +1,24 @@
+<main>  
+{{#each products}}
+<div class="product-div" data-id={{this._id}}>
+   
+    <div class="product-img-div">
+        <a href="/{{this.imagePath}}.jpg" ><img src="/{{this.imagePath}}.jpg" alt="image" width="100px" height="100px"></a>
+    </div>
+    <div class="product-h3-div">
+        <h3>{{this.title}}</h3>
+        <p>{{this.discription}}</p>
+    </div>
+    <div class="product-ptag-div">
+        <p><bold>$</bold><span>{{this.price}}</span></p>
+    </div>
+    <div class="product-atag-div">
+        <button id="addCart"><a href="/addcart/{{this._id}}">Add To Shopping Cart</a></button>
+    </div>
+ 
+</div>
+{{/each}}
+
+
+</main>
+
