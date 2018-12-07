@@ -4,7 +4,10 @@
   "description": "A simple nodejs and express with handlebars shopping card with some more functionalities",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node main"
+  },
+  "engines": {
+    "node": "9.11.1"
   },
   "repository": {
     "type": "git",
